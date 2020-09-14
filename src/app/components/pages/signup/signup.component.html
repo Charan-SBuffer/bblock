@@ -1,0 +1,33 @@
+
+<div class="container m-3">
+    <div class="row">
+      <div class="col-lg-7" style="background-color: coral;height: 84vh;">
+        <h1 class="slideinrightproject">
+        -BUILD <br>
+        -RENOVATE<br>
+    -BUY<br>
+  -SELL<br>
+-FIND<br>
+-LIVE<br>
+-BE<br>
+-CELEBRATE
+</h1>
+
+      </div>
+      &nbsp;
+      <div class="col-lg-4 mt-2">
+        <div class="container contain" >
+          <h5 style="text-decoration-line: underline;">Sign up below:</h5><br>
+            <form [formGroup]="signup" (ngSubmit)="onSubmit()">
+                <label for="name" class="but">USERNAME : <input type="text" id="name" placeholder="EX : SAI CHARAN" formControlName="name"> </label><br>
+                <label for="email" class="but">USER EMAILID : <input type="email" id="email" placeholder="EX : SAI**@gmail.com" formControlName="email"></label><br>
+                <label for="password" class="but">PASSWORD : <input type="text" minlength="4" id="password" placeholder="EX : HAOB5#8&" formControlName="password"></label><br>
+                <label for="mobilenumber" class="but">MOBILENUMBER :  <input type="text" id="mobilenumber" placeholder="EX : 6516889655" formControlName="mobilenumber"></label><br>
+                <input type="text" id="userid" hidden=true formControlName="userid">
+                <input type="text" id="verified" hidden=true formControlName="verified"><br>
+                <button type="submit" class="but" [disabled]="!signup.valid">Submit</button>
+            </form>
+        </div>
+        </div>
+      </div>
+  </div>

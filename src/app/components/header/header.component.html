@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+  <a class="navbar-brand" routerLink="/" style="float: right;color: black;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-decoration-line: underline;">
+   Bblock    </a> <img src="../../../assets/icons/building_logo.png" width="40" height="40"/>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+      <!-- if the user is present then printing email -->
+      <!-- conditionally rendering links  -->
+      <a 
+      *ngIf="!userdetails"
+      routerLinkActive = "active"
+      routerLink="/signin"
+      class="nav-item nav-link " style="float: right;color: black;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+      Sign In
+    </a>
+      <a
+      *ngIf="!userdetails"
+       routerLink="/signup"
+      routerLinkActive = "active"
+      class="nav-item nav-link " style="float: right;color: black;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+      Sign Up
+  </a>
+
+  
+  <!-- <a 
+  *ngIf="!email"
+  routerLink="/home"
+   routerLinkActive = "active"
+   class="nav-item nav-link " style="float: right;color: black;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+  >post deals</a>  -->
+
+  <a 
+      *ngIf="userdetails"
+       routerLinkActive = "active"
+       class="nav-item nav-link " style="float: right;color: black;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+      >Shop Essentials</a>
+
+      <button
+      *ngIf="userdetails"
+       type="button"  (onclick)="logOut()" style="float: right;color: black;background-color: gray;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+      >Log Out</button>   
+  </div>
+  </div>
+</nav>
+

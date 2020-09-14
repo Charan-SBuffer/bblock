@@ -1,0 +1,25 @@
+.but{
+padding: 10px;
+font-size:large;
+width: 300px;
+background-color: salmon;
+}
+
+.contain{
+    border: darkgrey;
+    border-radius: 10px;
+    border-color: darkgrey;
+}
+.slideinrightproject {
+    float: right;
+    animation-duration: 3s;
+    animation-name: slideinright2;
+  }
+  @keyframes slideinright2 {
+    from {
+        margin-right : 40%;
+    }
+    to {
+        margin-right : 0%;
+    }
+  }

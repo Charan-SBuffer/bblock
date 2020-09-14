@@ -1,0 +1,110 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <button style="background-color: coral;width: 20vw;margin-left: 40vw;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Post Contract</button>
+
+<!-- Modal -->
+
+<div id="myModal" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="modal fade" role="dialog" >
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        
+      <div class="modal-header">
+        <!-- <button type="button" class="close"  data-dismiss="modal">&times;</button> -->
+        <h4 class="modal-title">Enter the Information</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+          <form [formGroup]="contractDetailsForm" (ngSubmit)="onSubmit()">
+             <input type="text" id="contractdetailsid"  formControlName="contractdetailsid" hidden=true> 
+             <br>
+           <input type="text" id="useridSeller"  formControlName="useridSeller" hidden=true> 
+           <br>
+             <input type="text" id="useridBuyer"  formControlName="useridBuyer" hidden=true> 
+             <br>
+            <label for="worklocation" class="but">worklocation :
+               <input type="text" id="worklocation" placeholder="EX :Hyderabad,Secundrabad " formControlName="worklocation"> </label><br>
+           
+               <div class="row-flex">
+                 <div class="col-sm">
+                    <label for="worktype" class="but">WORKTYPE : &nbsp;</label>
+                 </div>
+                 <div class="col-sm">
+                       <input type="radio" id="build" name="worktype" value="build">
+                          <label for="build"> &nbsp;BUILD</label><br>
+                 </div>
+                 <div class="col-sm">
+                            <input type="radio" id="renovate" name="worktype" value="renovate">
+                               <label for="renovate"> &nbsp;RENOVATE</label>  
+                              </div>
+                            </div>  
+  <br>
+            
+  <label for="workperiod" class="but">WORK PERIOD :
+               <input type="text" id="workperiod" placeholder="EX : 3 Months" formControlName="workperiod"></label><br>
+            <label for="workdescription" class="but">WORK DESCRIPTION : 
+               <input type="text"  id="workdescription"  formControlName="workdescription"></label><br>
+            <label for="contractsummary" class="but">CONTRACT SUMMARY :
+                <input type="text" id="contractsummary" placeholder="EX : Need to build a Penthouse" formControlName="contractsummary"></label><br>
+            
+                <div class="row-flex">
+                  <div class="col-sms">
+                     <label for="scale" class="but">SCALE : &nbsp;</label>
+                  </div>
+                  <div class="col-sms">
+                        <input type="radio" id="small" name="scale" value="small">
+                           <label for="small"> &nbsp;S</label><br>
+                  </div>
+                  <div class="col-sms">
+                             <input type="radio" id="medium" name="scale" value="medium">
+                                <label for="medium"> &nbsp;M</label>  
+                               </div>
+                               <div class="col-sms">
+                                <input type="radio" id="large" name="scale" value="large">
+                                   <label for="large"> &nbsp;L</label>  
+                                  </div>
+                                </div>
+   
+            
+            
+               <label for="bidstartdate" class="but">BID START DATE :
+                <input type="date" id="bidstartdate"  formControlName="bidstartdate"></label><br>
+            <label for="bidenddate" class="but">BID END DATE :
+                <input type="date" id="bidenddate"  formControlName="bidenddate"></label><br>
+          <br>
+            <button type="submit"  style="background-color: darkgrey;width: 20vw;margin-left: 5vw;" class="but" [disabled]="!contractDetailsForm.valid">SUBMIT</button>
+
+        </form>
+      </div>
+      <div class="col-sm">
+        <img src="../../../../assets/building-lg.jpg" width="240vw" height="360vh"/>
+      </div>
+    </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+  
+</body>
+</html>
+

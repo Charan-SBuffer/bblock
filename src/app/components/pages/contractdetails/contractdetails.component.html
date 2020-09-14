@@ -1,0 +1,38 @@
+<hr style="width: 60vw;">
+<app-postdeals></app-postdeals>
+<div class="container details row-flex" >
+    <div class="container col-sm" *ngFor="let cd of lisofcontracts" style="background-color: #EA7773;border-radius: 5px;margin-top: 5vh;">
+        <div class="container row">
+            <div class="col-sm">
+                <h6 style="text-decoration-line: underline;">CONTRACTID : {{cd.contractdetailsid}}</h6>
+<p>POSTED BY : {{cd.useridSeller}}</p><br>
+<p>LOCATION TO WORK : {{cd.worklocation}}</p><br>
+<p>WORK TYEP : {{cd.worktype}}</p><br>
+<strong>WORK SCALE : {{cd.scale}}</strong>
+</div>
+<button style="width: 20vw;height: 15vh;margin-top: 4.5vh;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#bidModal">BID</button>
+<button class="btn" style="width: 20vw;height: 15vh;margin-top: 4.5vh;" (onClick)="getfulldetails(contract.id)" >FullDetails</button>
+</div>
+</div>
+</div>
+
+<div id="bidModal" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="modal fade" role="dialog" >
+    <div class="modal-dialog modal-lg">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+          
+        <div class="modal-header">
+          <!-- <button type="button" class="close"  data-dismiss="modal">&times;</button> -->
+          <h4 class="modal-title">Enter your BID</h4>
+        </div>
+        <div class="modal-body">
+            <input type="text" size="20" id="bidamount" style="margin-left : 240px;margin-right: 40px;"/>
+            <button type="submit" style="width: 10vw;background-color: gray;">SUBMIT</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+              </div>
+            </div>
+            </div>
+            </div>
